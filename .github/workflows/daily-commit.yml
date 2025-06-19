@@ -19,6 +19,8 @@ jobs:
           echo "Commit made at $(date -u)" >> daily.txt
           git add daily.txt
           git commit -m "Daily update: $(date -u)"
+          git log -1
+
       - name: Push commit
         uses: ad-m/github-push-action@v0.6.0
         with:
